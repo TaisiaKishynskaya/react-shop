@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr{
+    display: block; /*блокирует hidden подчеркивания в Navbar.jsx, поэтому при нажатии на элементы меню подчеркивается активная страница*/
+    
+}
