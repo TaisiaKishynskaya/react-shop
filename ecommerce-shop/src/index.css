@@ -18,7 +18,7 @@ a.active hr{
     font-style: normal;
   }
 
-@media (max-width:640px) {
+@media (max-width:640px) { /*красит в черный текущую строку в маленьком меню*/
     a.active{
         background-color: black;
         color: white;
