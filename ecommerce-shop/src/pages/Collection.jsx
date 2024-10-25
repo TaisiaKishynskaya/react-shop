@@ -13,7 +13,7 @@ const Collection = () => {
 
   const toggleCategory = (e) =>{
     if(category.includes(e.target.value)){
-      setCategory(prex=>ProgressEvent.filter(item=>item!==e.target.value))
+      setCategory(prev=>prev.filter(item=>item!==e.target.value))
     }
     else{
       setCategory(prev=>[...prev,e.target.value])
@@ -22,7 +22,7 @@ const Collection = () => {
 
   const toggleSubCategory = (e) =>{
     if(subCategory.includes(e.target.value)){
-      setSubCategory(prev=>ProgressEvent.filter(item=>item!==e.target.value))
+      setSubCategory(prev=>prev.filter(item=>item!==e.target.value))
     }
     else{
       setSubCategory(prev=>[...prev,e.target.value])
@@ -33,7 +33,7 @@ const Collection = () => {
     let productsCopy = products.slice();
 
     if(showSearch && search){
-      productsCopy = productsCopy.filter(item => item.name.toLowetCase().includes(search.toLowetCase()));
+      productsCopy = productsCopy.filter(item => item.name.toLowetCase().includes(search.toLowetCase()))
     }
 
     if (category.length > 0 ){
